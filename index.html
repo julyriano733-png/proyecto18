@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="July Daniela Riaño Soto">
+    <title>GitHub Repository Finder</title>
+    <link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+
+    <div class="caja">
+
+        <h1>🌸 GitHub Repository Finder</h1>
+
+        <!-- Aquí se escoge el lenguaje -->
+        <select id="lenguaje">
+            <option value="">Select a Language</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="PHP">PHP</option>
+            <option value="Ruby">Ruby</option>
+            <option value="Go">Go</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+        </select>
+
+        <!-- Mensaje para los estados: vacío, cargando y error -->
+        <div id="mensaje">Please select a language</div>
+
+        <!-- Botón que sale cuando hay error -->
+        <button id="botonReintentar">Click to retry</button>
+
+        <!-- Aquí sale el repositorio -->
+        <div id="tarjeta">
+            <h2 id="nombre"></h2>
+            <p id="descripcion"></p>
+            <p>⭐ Estrellas: <span id="estrellas"></span></p>
+            <p>🍴 Forks: <span id="forks"></span></p>
+            <p>❗ Issues abiertos: <span id="issues"></span></p>
+        </div>
+
+        <!-- Botón para buscar otro -->
+        <button id="botonRefresh">Refresh</button>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

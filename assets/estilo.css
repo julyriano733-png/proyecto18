@@ -1,0 +1,74 @@
+body {
+    background-color: #ffe4ec;
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+}
+
+.caja {
+    background-color: white;
+    border: 2px solid #f48fb1;
+    border-radius: 15px;
+    padding: 25px;
+    width: 350px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #c2185b;
+    font-size: 20px;
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f48fb1;
+    border-radius: 10px;
+    background-color: #fff0f5;
+    margin-bottom: 15px;
+}
+
+#mensaje {
+    background-color: #f3e5f5;
+    color: #6a1b9a;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#tarjeta {
+    display: none;
+    background-color: #fff0f5;
+    border: 2px solid #f48fb1;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #880e4f;
+}
+
+#tarjeta h2 {
+    color: #c2185b;
+    font-size: 18px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#botonRefresh {
+    display: none;
+    background-color: #ec407a;
+}
+
+#botonReintentar {
+    display: none;
+    background-color: #e53935;
+    margin-bottom: 10px;
+}
