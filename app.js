@@ -16,7 +16,7 @@ var issues = document.getElementById("issues");
 function estadoVacio() {
     mensaje.style.display = "block";
     mensaje.style.backgroundColor = "#f3e5f5";
-    mensaje.textContent = "Please select a language";
+    mensaje.textContent = "Por favor selecciona un lenguaje";
     tarjeta.style.display = "none";
     botonRefresh.style.display = "none";
     botonReintentar.style.display = "none";
@@ -26,7 +26,7 @@ function estadoVacio() {
 function estadoCargando() {
     mensaje.style.display = "block";
     mensaje.style.backgroundColor = "#fce4ec";
-    mensaje.textContent = "Loading, please wait...";
+    mensaje.textContent = "Cargando, por favor espera...";
     tarjeta.style.display = "none";
     botonRefresh.style.display = "none";
     botonReintentar.style.display = "none";
@@ -36,7 +36,7 @@ function estadoCargando() {
 function estadoError() {
     mensaje.style.display = "block";
     mensaje.style.backgroundColor = "#ffcdd2";
-    mensaje.textContent = "Error fetching repositories";
+    mensaje.textContent = "Error al buscar los repositorios";
     tarjeta.style.display = "none";
     botonRefresh.style.display = "none";
     botonReintentar.style.display = "block";
