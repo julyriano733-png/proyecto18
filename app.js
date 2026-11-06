@@ -75,11 +75,8 @@ async function buscarRepositorio() {
     estadoCargando();
 
     try {
-        // Escojo una página al azar del 1 al 10
-        var pagina = Math.floor(Math.random() * 10) + 1;
-
-        var url = "https://api.github.com/search/repositories?q=language:" + lenguaje.value + "&per_page=100&page=" + pagina;
-
+        // Busco solo entre mis repositorios, con el lenguaje que escogieron
+        var url = "https://api.github.com/search/repositories?q=user:julyriano733-png+language:" + lenguaje.value + "&per_page=100";
         var respuesta = await fetch(url);
 
         // Si GitHub respondió mal, lo mando al error
@@ -89,6 +86,17 @@ async function buscarRepositorio() {
         }
 
         var datos = await respuesta.json();
+
+        // Si no hay ningún repositorio con ese lenguaje, aviso con un mensaje
+        if (datos.items.length == 0) {
+            mensaje.style.display = "block";
+            mensaje.style.backgroundColor = "#f3e5f5";
+            mensaje.textContent = "No tienes repositorios con ese lenguaje";
+            tarjeta.style.display = "none";
+            botonRefresh.style.display = "none";
+            botonReintentar.style.display = "none";
+            return;
+        }
 
         // Escojo un repositorio al azar de los que llegaron
         var numero = Math.floor(Math.random() * datos.items.length);
