@@ -73,7 +73,7 @@ async function buscarRepositorio() {
     }
 
     estadoCargando();
-
+//maneja errores
     try {
         // Busco solo entre mis repositorios, con el lenguaje que escogieron
         var url = "https://api.github.com/search/repositories?q=user:julyriano733-png+language:" + lenguaje.value + "&per_page=100";
